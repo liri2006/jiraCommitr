@@ -40,7 +40,7 @@ function getTitle(taskRaw) {
 };
 
 $(function () {
-	$(".ghx-issue").on("click", function () {
+	$(document).on("click", ".ghx-issue", function () {
 		var title = getTitle(this);
 		if (title) {
 			console.log(title);
