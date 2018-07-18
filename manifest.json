@@ -1,5 +1,5 @@
 {
-    "version": "0.0.4",
+    "version": "0.0.6",
     "name": "Jira Commitr",
     "permissions": [
         "activeTab"
@@ -8,7 +8,7 @@
         "default_title": "Jira Commitr"
     },
     "content_scripts": [{
-        "matches": ["https://*.atlassian.net/*"],
+        "matches": ["https://*.atlassian.net/*", "https://*.ematique.com/*"],
         "js": ["jquery-3.2.1.min.js", "content.js"],
         "run_at": "document_end"
     }],

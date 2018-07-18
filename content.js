@@ -28,7 +28,7 @@ function getTaskPart(task) {
 		return null;
 	}
 	var taskNum = task.attr("data-issue-key");
-	var taskTitle = task.find("section.ghx-summary").text();
+	var taskTitle = task.find(".ghx-summary").text();
 	return taskNum + ": " + taskTitle;
 }
 
