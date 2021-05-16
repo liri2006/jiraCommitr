@@ -28,18 +28,16 @@ function getTaskPart(task) {
 }
 
 function getStoryPart(task) {
-	var story = task.parents(".cu-task-list__outer");
-	if (story.length === 0) {
-		return null;
-	}
-
-	story = story.find("> .cu-task-list__rows > .cu-task-row > .task-row__container");
+	var story = task
+		.closest(".cu-task-list")
+		.closest('.cu-task-row')
+		.find("> .cu-task-row__container");
 	if (story.length === 0) {
 		return null;
 	}
 
 	var storyNum = story.attr("data-task");
-	var storyTitle = story.find("> .cu-task-row__container .cu-task-row-main__link-text-inner").text();
+	var storyTitle = story.find(".cu-task-row-main__link-text-inner").text();
 
 	return storyNum && storyTitle ?
 		"#" + storyNum + ": " + storyTitle :
