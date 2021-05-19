@@ -24,7 +24,7 @@ function getTaskPart(task) {
 	}
 	var taskNum = task.attr("data-task");
 	var taskTitle = task.find(".cu-task-row-main__link-text-inner").text();
-	return "#" + taskNum + ": " + taskTitle;
+	return "[#" + taskNum + "]: " + taskTitle;
 }
 
 function getStoryPart(task) {
@@ -40,7 +40,7 @@ function getStoryPart(task) {
 	var storyTitle = story.find(".cu-task-row-main__link-text-inner").text();
 
 	return storyNum && storyTitle ?
-		"#" + storyNum + ": " + storyTitle :
+		"[#" + storyNum + "]: " + storyTitle :
 		"";
 }
 
